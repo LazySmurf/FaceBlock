@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are You Sure You Want To Visit Facebook?</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Facebook Activity Tracker">
+        <meta name="keywords" content="Facebook,activity,tracker,blocker">
+        <meta name="author" content="LazySmurf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../Shared/assets/css/bootstrap.css">
+    </head>
+
+    <body style="background-color: transparent;" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary showModal" id="showModal" name="showModal" style="display: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Open FaceBlocker Modal
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                <h5 class="modal-title d-flex align-items-center" id="staticBackdropLabel"><img src="../Shared/assets/img/Facebook.png" name="logo" id="logo" style="height: 20px;" />&nbsp;FaceBlocker&nbsp;<sub style="font-size: xx-small; float: bottom;">By LazySmurf</sub></h5>
+                </div>
+                <div class="modal-body">
+                    <label for="PassPhrase" id="PassPhraseLabel" name="PassPhraseLabel">To continue to Facebook, please enter the correct case-sensitive phrase exactly as you see it:
+                        <br><br>
+                        <span class="text-info" style="font-size: large; font-weight: 600;" id="selectedPhrase" name="selectedPhrase">selectedPhrase</span>
+                    </label>
+                    <br><br>
+                    <input autofocus name="PassPhrase" id="PassPhrase" type="text" class="form-control bg-dark text-light" placeholder="Enter Phrase Here" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <span id="message" name="message" class="float-start"></span>
+                <button type="submit" name="submit" id="submit" class="btn rounded-pill btn-primary">Check &rarr;</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script src="../Shared/assets/js/bootstrap.js"></script>
+        <script src="../Shared/assets/js/jquery.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
