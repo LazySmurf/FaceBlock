@@ -6,9 +6,9 @@
     "version":              "0.0.1.0",
     "version_name":         "0.0.1 Beta",
     "author":               "alex.kotanko1@gmail.com",
-    "homepage_url":         "https://omen.bot/faceblock",
+    "homepage_url":         "https://github.com/LazySmurf/FaceBlock",
     "incognito":            "spanning",
-    "update_url":           "https://omen.bot/faceblock/updateInfo.xml",
+    "update_url":           "https://github.com/LazySmurf/FaceBlock/releases",
     "options_page":         "Backend/options.html",
   
     "icons": {
