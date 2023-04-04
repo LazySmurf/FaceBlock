@@ -2,7 +2,7 @@
 ////                                  Tab Handler                                 ////
 //////////////////////////////////////////////////////////////////////////////////////
 //Set variable to store TabID, then run function to grab it asynchronously
-var CurrentTabID;
+/* var CurrentTabID;
 function start() {
     return getCurrentTab();
 }
@@ -24,7 +24,7 @@ async function getCurrentTab() {
     // `tab` will either be a `tabs.Tab` instance or `undefined`.
     let [tab] = await chrome.tabs.query(queryOptions);
     return tab;
-}
+} */
 
 
 //////////////////////////////////////////////////////////////////////////////////////

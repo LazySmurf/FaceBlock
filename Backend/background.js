@@ -1,4 +1,6 @@
 var CURR_STATE;
+let RESET_TIMER = "600"; //Seconds after solving to allow access without prompting to solve again. Default: 600 (10 mins) - Can be made an option for the options page later.
+
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
       text: "OFF",
@@ -15,6 +17,7 @@ chrome.tabs.onUpdated.addListener(async function
             if (changeInfo.url.startsWith(facebookURL) || changeInfo.url.startsWith(facebookURLwww)) {
                 // Set the action badge to the ON state if URL is Facebook
                 setState(tab.id, "ON");
+                self.CURR_STATE = "ON";
 
                 //Inject modal script into page and execute it
                 chrome.scripting.executeScript({
@@ -24,6 +27,7 @@ chrome.tabs.onUpdated.addListener(async function
             } else {
                 // Set the action badge to the OFF state if URL isn't Facebook
                 setState(tab.id, "OFF");
+                self.CURR_STATE = "OFF";
             }
         }
         /*****/
@@ -31,18 +35,16 @@ chrome.tabs.onUpdated.addListener(async function
 );
 
 function setState(tabID, nextState) {
+    console.log(self);
     switch (nextState) {
-        case "ON":
+        case "ON", true:
             boolState = chrome.runtime.getManifest().name + " - Enabled";
-            CURR_STATE = nextState;
             break;
-        case "OFF":
+        case "OFF", false:
             boolState = chrome.runtime.getManifest().name + " - Disabled";
-            CURR_STATE = nextState;
             break;
         default:
             boolState = chrome.runtime.getManifest().name + " - Error";
-            CURR_STATE = "ERROR";
             break;
     }
     chrome.action.setBadgeText({

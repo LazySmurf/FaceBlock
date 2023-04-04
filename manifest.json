@@ -5,7 +5,7 @@
     "description":          "Ensures you confirm you want to visit Facebook before letting you get lost scrolling.",
     "version":              "0.0.1.0",
     "version_name":         "0.0.1 Beta",
-    "author":               "alex.kotanko1@gmail.com",
+    "author":               "LazySmurf",
     "homepage_url":         "https://github.com/LazySmurf/FaceBlock",
     "incognito":            "spanning",
     "update_url":           "https://github.com/LazySmurf/FaceBlock/releases",

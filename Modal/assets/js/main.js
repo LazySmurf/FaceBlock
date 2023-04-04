@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    var VersionInfo = "1.0 Beta";
     var DevInfo = "LazySmurf";
-    var AppName = "";
 
     //Auto-Open Modal
     $('.showModal').click()
@@ -62,7 +60,7 @@ $(document).ready(function () {
 
         //If the logo image is clicked, we will show an alert with some version info
         else if (this.id == 'logo') {
-           alert('FaceBlocker\nVersion ' + VersionInfo + "\n\nBy " + DevInfo);
+           alert(apps[i].innerHTML = chrome.runtime.getManifest().name + '\nVersion ' + chrome.runtime.getManifest().version_name + "\n\nBy " + chrome.runtime.getManifest().author);
         }
      });
 });
